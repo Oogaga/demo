@@ -1,0 +1,7 @@
+<section class="filter-section">
+  <app-button-filter (out)="changeColumns($event)"></app-button-filter>
+  <input class="search" (keyup)="search(searchInput)"
+         [(ngModel)]="searchInput" placeholder="Search">
+  <svg class="search-svg"></svg>
+  <button class="search-submit" type="submit"></button>
+</section>

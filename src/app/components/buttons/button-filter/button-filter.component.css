@@ -1,0 +1,78 @@
+
+:hover.svg-button {
+  fill: #1890FF;
+  transition-duration: 0.2s;
+}
+
+.svg-button {
+padding: 10px;
+}
+
+.button-filter {
+  background: none;
+  border: 0;
+  height: 34px;
+  width: 34px;
+  margin-right: 10px;
+}
+
+.dropped {
+  display: none;
+  background: #FFFFFF;
+  box-shadow: 0 0 2px rgb(131 150 168 / 16%), 0 16px 32px rgb(131 150 168 / 16%);
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid #D5DADD40;
+}
+
+.drop-list{
+}
+
+.drop-list:hover .dropped {
+  display: block;
+  transition-duration: 1s;
+}
+li>section {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: '72-Regular';
+  color: #5B738B;
+  height: 35px;
+}
+
+.name-of-column{
+  user-select: none;
+}
+
+.checkbox {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.checkbox > input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  border: 1.5px solid #5B738B;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.checkbox > input:checked + span::before {
+  content: url("../../../../assets/images/check.svg");
+  position: absolute;
+  left: 7.5px;
+}
+
+.checkbox > input:checked {
+  border: 2px solid #1B90FF;
+}

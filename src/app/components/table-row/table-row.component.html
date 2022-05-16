@@ -1,0 +1,59 @@
+<td class="column1"
+    [ngClass]="{
+    'top-left-radius': topRadius,
+    'bottom-left-radius': bottomRadius
+    }">
+
+  <fd-checkbox
+    [(ngModel)]="displayingData[this.index].data.flag"
+    size="xs"
+  >
+
+  </fd-checkbox>
+
+  <!--  <label-->
+  <!--    class="checkbox ">-->
+  <!--    <input [(ngModel)]="displayingData[this.index].data.flag" type="checkbox">-->
+  <!--    <span></span>-->
+  <!--  </label>-->
+</td>
+<td (click)="changeDetector(index)" class="img ">
+  <fd-avatar size="s" [circle]="true" alt="user-img" image="{{displayingData[this.index].data.img}}"></fd-avatar>
+</td>
+<td (click)="changeDetector(index)">
+    <span [ngClass]="filterFlags[0] ? 'active-state' : 'blocked-state'"
+          class="padding font-bold">{{displayingData[this.index].data.name}}</span>
+</td>
+<td (click)="changeDetector(index)">
+    <span [ngClass]="filterFlags[1] ? 'active-state' : 'blocked-state'"
+          class="padding font-regular">{{displayingData[this.index].data.position}}</span>
+</td>
+<td (click)="changeDetector(index)">
+    <span [ngClass]="filterFlags[2] ? 'active-state' : 'blocked-state'"
+          class="padding font-regular">{{displayingData[this.index].data.department}}</span>
+</td>
+<td (click)="changeDetector(index)">
+    <span [ngClass]="filterFlags[3] ? 'active-state' : 'blocked-state'"
+          class="padding font-regular">{{displayingData[this.index].data.seniorityLevel}}</span>
+</td>
+<td (click)="changeDetector(index)">
+    <span [ngClass]="filterFlags[4] ? 'active-state' : 'blocked-state'"
+          class="padding font-regular">{{displayingData[this.index].data.location}}</span>
+</td>
+<td (click)="changeDetector(index)">
+    <span [ngClass]="filterFlags[5] ? 'active-state' : 'blocked-state'"
+          class="padding position-right font-regular">{{displayingData[this.index].data.companyWorkExperience}}</span>
+</td>
+<td (click)="changeDetector(index)"
+    [ngClass]="{
+    'top-right-radius': topRadius,
+    'bottom-right-radius': bottomRadius
+    }">
+  <span class="padding position-right last-col"
+        [ngClass]="{'match-green':(displayingData[this.index].data.positionMatch>=66), 'match-blue':((displayingData[this.index].data.positionMatch<66)&&(displayingData[this.index].data.positionMatch>=40)), 'match-red':(displayingData[this.index].data.positionMatch<40)}">
+    <span
+      class="font-bold">{{displayingData[this.index].data.positionMatch}}% Match
+    </span>
+  </span>
+</td>
+

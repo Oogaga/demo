@@ -1,0 +1,42 @@
+<div class="main-container">
+  <div class="header-filter">
+    <div class="count-of-designers font-bold">Exterior Designer ({{displayingData.length}})</div>
+    <app-s-input (searchEmitter)="search($event)" [displayingData]="displayingData"
+                 (out)="changeColumns($event)"></app-s-input>
+  </div>
+  <div class="hr"></div>
+  <section class="table">
+    <table>
+      <col style="width: 3.8%;">
+      <col style="width: 6.3%;">
+      <col style="width: 13.4%;">
+      <col style="width: 16.3%;">
+      <col style="width: 12.5%;">
+      <col style="width: 11%;">
+      <col style="width: 13.2%;">
+      <col style="width: 15.4%;">
+      <col style="width: 8.1%;">
+      <tr>
+        <th class="column1"><label class=" checkbox">
+          <input class="checkbox" (click)="takeAll(mainFlag)" [(ngModel)]="mainFlag" type="checkbox">
+          <span></span>
+        </label></th>
+        <th class="img ">
+        </th>
+        <th (click)="sort(headersId[i])" class="font-bold users-header"
+            [ngClass]="{'position-right-header': (i>4)}"
+            *ngFor="let header of headersName, let i = index"><span>
+          <section *ngIf="i>4" class="arrows"><div class="arrow-up"></div><div
+            class="arrow-down"></div></section>
+          {{header}}
+          <section *ngIf="i<5" class="arrows"><div class="arrow-up"></div><div
+            class="arrow-down"></div></section></span></th>
+
+      </tr>
+      <tr class="row" table-row dynamic-template (click)="dirty()"
+          [ngClass]="{'user-container': !data.data.flag, 'user-container-choosed': data.data.flag}"
+          *ngFor="let data of displayingData, let i = index"
+          [displayingData]="displayingData" (returnData)="usersData($event)" [filterFlags]="filterFlags" [index]="i"></tr>
+    </table>
+  </section>
+</div>

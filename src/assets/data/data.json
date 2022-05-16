@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "data": {
+      "name": "Amir Kaya",
+      "position": "Exterior Designer",
+      "department": "Lemousine e",
+      "seniorityLevel": "D2, 3",
+      "location": "Germany, Musterstadt",
+      "companyWorkExperience": "6 years, 3 months",
+      "positionMatch": 74,
+      "img": "../assets/images/users/1.png",
+      "flag": false
+    }
+  },
+  {
+    "id": 2,
+    "data": {
+      "name": "Emil Makinen",
+      "position": "Exterior Designer",
+      "department": "Lemousine e",
+      "seniorityLevel": "D2, 2",
+      "location": "Germany, Musterstadt",
+      "companyWorkExperience": "7 years, 7 months",
+      "positionMatch": 58,
+      "img": "../assets/images/users/2.png",
+      "flag": false
+    }
+  },
+  {
+    "id": 3,
+    "data": {
+      "name": "Dakota Summers",
+      "position": "Exterior Designer",
+      "department": "Urban City e",
+      "seniorityLevel": "D2, 2",
+      "location": "Germany, Musterstadt",
+      "companyWorkExperience": "5 years, 1 month",
+      "positionMatch": 55,
+      "img": "../assets/images/users/3.png",
+      "flag": false
+    }
+  },
+  {
+    "id": 4,
+    "data": {
+      "name": "Lisa Heinrich ",
+      "position": "Junior Exterior Designer",
+      "department": "Urban City e",
+      "seniorityLevel": "D2, 1",
+      "location": "Germany, Berlin",
+      "companyWorkExperience": "2 years, 2 months",
+      "positionMatch": 36,
+      "img": "../assets/images/users/4.png",
+      "flag": false
+    }
+  },
+  {
+    "id": 5,
+    "data": {
+      "name": "Veronica Nguyen",
+      "position": "Junior Exterior Designer",
+      "department": "Urban City e",
+      "seniorityLevel": "D2, 1",
+      "location": "Germany, Berlin",
+      "companyWorkExperience": "2 years, 2 months",
+      "positionMatch": 34,
+      "img": "../assets/images/users/5.png",
+      "flag": false
+    }
+  },
+  {
+    "id": 6,
+    "data": {
+      "name": "Robin Meyer",
+      "position": "Junior Exterior Designer",
+      "department": "Country h2",
+      "seniorityLevel": "D2, 1",
+      "location": "United States, New York",
+      "companyWorkExperience": "1 year, 7 months",
+      "positionMatch": 34,
+      "img": "../assets/images/users/6.png",
+      "flag": false
+    }
+  },
+  {
+    "id": 7,
+    "data": {
+      "name": "Brian Kowalski",
+      "position": "Junior Exterior Designer",
+      "department": "Country h2",
+      "seniorityLevel": "D2, 1",
+      "location": "United States, Seattle",
+      "companyWorkExperience": "1 year, 6 months",
+      "positionMatch": 32,
+      "img": "../assets/images/users/7.png",
+      "flag": false
+    }
+  },
+  {
+    "id": 8,
+    "data": {
+      "name": "Janet Gibson",
+      "position": "Junior Exterior Designer",
+      "department": "Sport  eS",
+      "seniorityLevel": "D2, 1",
+      "location": "South Korea, Seoul",
+      "companyWorkExperience": "1 year",
+      "positionMatch": 30,
+      "img": "../assets/images/users/8.png",
+      "flag": false
+    }
+  }
+]

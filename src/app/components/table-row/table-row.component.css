@@ -1,0 +1,155 @@
+
+.font-regular {
+  font-family: '72-Regular';
+}
+
+.font-bold {
+  font-family: '72-Bold';
+}
+
+.active-state {
+  color: #223548;
+}
+
+.blocked-state {
+  color: #22354870;
+}
+
+.user-container,
+.user-container-choosed {
+  padding: 0 6px 0 6px;
+  font-size: 14px;
+}
+
+
+.padding {
+  padding: 0 5px 0 5px;
+}
+
+.column1 {
+  max-width: 50px;
+  min-width: 35px;
+  padding: 0 0 0 5px;
+}
+
+.top-left-radius{border-top-left-radius: 7px}
+.top-right-radius{border-top-right-radius: 7px}
+.bottom-left-radius{border-bottom-left-radius: 7px}
+.bottom-right-radius{border-bottom-right-radius: 7px}
+
+.column {
+  min-width: 0vw;
+}
+
+.check-label:checked{
+  content: url("../../../assets/images/check.svg");
+}
+
+.checkbox{
+  height: 10px;
+  width: 10px;
+}
+
+/*.checkbox {*/
+/*  display: inline-flex;*/
+/*  cursor: pointer;*/
+/*  position: relative;*/
+/*}*/
+
+
+/*.checkbox > input {*/
+/*  -webkit-appearance: none;*/
+/*  -moz-appearance: none;*/
+/*  -o-appearance: none;*/
+/*  appearance: none;*/
+/*  height: 18px;*/
+/*  width: 18px;*/
+/*  border: 2px solid #5B738B;*/
+/*  border-radius: 3px;*/
+/*}*/
+
+/*.checkbox > input:checked + span::before {*/
+/*  content: url("../../../assets/images/check.svg");*/
+/*  position: absolute;*/
+/*  left: 7.5px;*/
+/*  top: 2px;*/
+/*}*/
+
+
+
+/*.checkbox > input:checked {*/
+/*  border: 2px solid #1B90FF;*/
+/*}*/
+
+
+.img {
+  height: 50px;
+  min-width: 60px;
+  max-width: 60px;
+}
+
+
+.position-right {
+  min-width: 84px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.last-col{
+  margin-right: 10px;
+}
+
+.match-green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E5F2BD;
+  color: #256F3A;
+  border-left: 2px solid #256F3A;
+  border-radius: 4px;
+  overflow: clip;
+  height: 24px;
+  width: 95px;
+}
+
+.match-blue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D1EFFF;
+  color: #0057D2;
+  border-left: 2px solid #0057D2;
+  border-radius: 4px;
+  overflow: clip;
+  height: 24px;
+  width: 95px;
+}
+
+.match-red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF3B8;
+  color: #A93E00;
+  border-left: 2px solid #A93E00;
+  border-radius: 4px;
+  overflow: clip;
+  height: 24px;
+  width: 95px;
+}
+
+
+td {
+  text-align: left;
+  white-space: nowrap;
+  height: 65px;
+  vertical-align: center;
+}
+
+td:hover {
+  cursor: pointer;
+  user-select: none;
+}
+
