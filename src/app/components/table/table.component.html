@@ -1,6 +1,6 @@
 <div class="main-container">
   <div class="header-filter">
-    <div class="count-of-designers font-bold">Exterior Designer ({{displayingData.length}})</div>
+    <div class="count-of-designers font-bold">Exterior Designer <span class="amount">({{displayingData.length}})</span></div>
     <app-s-input (searchEmitter)="search($event)" [displayingData]="displayingData"
                  (out)="changeColumns($event)"></app-s-input>
   </div>
@@ -18,7 +18,7 @@
       <col style="width: 8.1%;">
       <tr>
         <th class="column1"><label class=" checkbox">
-          <input class="checkbox" (click)="takeAll(mainFlag)" [(ngModel)]="mainFlag" type="checkbox">
+          <input class="checkbox" (click)="takeAll(mainFlag); dirty()" [(ngModel)]="mainFlag" type="checkbox">
           <span></span>
         </label></th>
         <th class="img ">
@@ -36,7 +36,8 @@
       <tr class="row" table-row dynamic-template (click)="dirty()"
           [ngClass]="{'user-container': !data.data.flag, 'user-container-choosed': data.data.flag}"
           *ngFor="let data of displayingData, let i = index"
-          [displayingData]="displayingData" (returnData)="usersData($event)" [filterFlags]="filterFlags" [index]="i"></tr>
+          [data]="data" [filterFlags]="filterFlags" [index]="i">
+      </tr>
     </table>
   </section>
 </div>

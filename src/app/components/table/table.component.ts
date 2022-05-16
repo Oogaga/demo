@@ -1,16 +1,12 @@
 import {
-  AfterViewChecked,
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  AfterContentInit,
   Component,
   DoCheck,
-  OnInit, QueryList,
-  ViewChildren
+  OnInit, TemplateRef, ViewChild,
+  ViewContainerRef
 } from '@angular/core';
 import {User} from "../../interfaces/user/user";
 import {UsersService} from "../../service/users.service";
-import {TableRowComponent} from "../table-row/table-row.component";
 
 
 @Component({
@@ -24,22 +20,29 @@ export class TableComponent implements OnInit, DoCheck {
 
   mainFlag: boolean = false;
   filterFlags: boolean[] = new Array(6).fill(true);
+  public static topRadius: boolean[] = [];
+  public static bottomRadius: boolean[] = [];
   displayingData: User[] = [];
   public static json: User[] = [];
   field: string = '';
   isDirty = false;
+  top: boolean = true;
+  bottom: boolean = true;
   headersName = ['Name', 'Position', 'Department', 'Seniority Level', 'Location', 'Company Work Experience', 'Position Match'];
   headersId = ['name', 'position', 'department', 'seniorityLevel', 'location', 'companyWorkExperience', 'positionMatch'];
 
-
   constructor(private service: UsersService
-  ) {  }
+  ) {
+  }
+
 
   ngOnInit() {
     this.getUsers();
+    TableComponent.topRadius =  new Array(TableComponent.json.length).fill(true)
+    TableComponent.bottomRadius =  new Array(TableComponent.json.length).fill(true)
   }
 
-  getUsers(){
+  getUsers() {
     this.service.getData().subscribe(data => {
       this.displayingData = data;
       TableComponent.json = data;
@@ -65,10 +68,6 @@ export class TableComponent implements OnInit, DoCheck {
     }
   }
 
-  usersData(data: User[]) {
-    this.displayingData = data;
-  }
-
   search(data: User[]) {
     this.displayingData = data;
   }
@@ -80,11 +79,15 @@ export class TableComponent implements OnInit, DoCheck {
     }
   }
 
+
   ngDoCheck() {
     if (this.isDirty) {
       this.isDirty = false;
+      setTimeout(()=>{this.displayingData=[]})
+      setTimeout(()=>{this.displayingData=TableComponent.json})
       console.log('isDirty')
     }
+
   }
 
 }

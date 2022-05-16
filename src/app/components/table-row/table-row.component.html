@@ -4,45 +4,47 @@
     'bottom-left-radius': bottomRadius
     }">
 
-  <fd-checkbox
-    [(ngModel)]="displayingData[this.index].data.flag"
-    size="xs"
-  >
+<!--  <fd-checkbox-->
+<!--    [(ngModel)]="data.data.flag"-->
+<!--    size="xs"-->
+<!--  >-->
 
-  </fd-checkbox>
+<!--  </fd-checkbox>-->
 
-  <!--  <label-->
-  <!--    class="checkbox ">-->
-  <!--    <input [(ngModel)]="displayingData[this.index].data.flag" type="checkbox">-->
-  <!--    <span></span>-->
-  <!--  </label>-->
+    <label
+      class="checkbox ">
+      <input [(ngModel)]="data.data.flag" type="checkbox">
+      <span></span>
+    </label>
+  <div class="underline"></div>
 </td>
 <td (click)="changeDetector(index)" class="img ">
-  <fd-avatar size="s" [circle]="true" alt="user-img" image="{{displayingData[this.index].data.img}}"></fd-avatar>
+  <fd-avatar size="s" [circle]="true" alt="user-img" image="{{data.data.img}}"></fd-avatar>
+  <div class="underline"></div>
 </td>
 <td (click)="changeDetector(index)">
     <span [ngClass]="filterFlags[0] ? 'active-state' : 'blocked-state'"
-          class="padding font-bold">{{displayingData[this.index].data.name}}</span>
+          class="padding font-bold">{{data.data.name}}</span>
 </td>
 <td (click)="changeDetector(index)">
     <span [ngClass]="filterFlags[1] ? 'active-state' : 'blocked-state'"
-          class="padding font-regular">{{displayingData[this.index].data.position}}</span>
+          class="padding font-regular">{{data.data.position}}</span>
 </td>
 <td (click)="changeDetector(index)">
     <span [ngClass]="filterFlags[2] ? 'active-state' : 'blocked-state'"
-          class="padding font-regular">{{displayingData[this.index].data.department}}</span>
+          class="padding font-regular">{{data.data.department}}</span>
 </td>
 <td (click)="changeDetector(index)">
     <span [ngClass]="filterFlags[3] ? 'active-state' : 'blocked-state'"
-          class="padding font-regular">{{displayingData[this.index].data.seniorityLevel}}</span>
+          class="padding font-regular">{{data.data.seniorityLevel}}</span>
 </td>
 <td (click)="changeDetector(index)">
     <span [ngClass]="filterFlags[4] ? 'active-state' : 'blocked-state'"
-          class="padding font-regular">{{displayingData[this.index].data.location}}</span>
+          class="padding font-regular">{{data.data.location}}</span>
 </td>
 <td (click)="changeDetector(index)">
     <span [ngClass]="filterFlags[5] ? 'active-state' : 'blocked-state'"
-          class="padding position-right font-regular">{{displayingData[this.index].data.companyWorkExperience}}</span>
+          class="padding position-right font-regular">{{data.data.companyWorkExperience}}</span>
 </td>
 <td (click)="changeDetector(index)"
     [ngClass]="{
@@ -50,9 +52,9 @@
     'bottom-right-radius': bottomRadius
     }">
   <span class="padding position-right last-col"
-        [ngClass]="{'match-green':(displayingData[this.index].data.positionMatch>=66), 'match-blue':((displayingData[this.index].data.positionMatch<66)&&(displayingData[this.index].data.positionMatch>=40)), 'match-red':(displayingData[this.index].data.positionMatch<40)}">
+        [ngClass]="{'match-green':(data.data.positionMatch>=66), 'match-blue':((data.data.positionMatch<66)&&(data.data.positionMatch>=40)), 'match-red':(data.data.positionMatch<40)}">
     <span
-      class="font-bold">{{displayingData[this.index].data.positionMatch}}% Match
+      class="font-bold">{{data.data.positionMatch}}% Match
     </span>
   </span>
 </td>
